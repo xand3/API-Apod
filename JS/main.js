@@ -5,12 +5,15 @@ function fazGet(url) {
     return request.responseText
 }
 let img = document.getElementById("img-apod")
+$("#img").html("alo")
 
 function defineUrl(id, url) {
     if(id == 'img-apod') {
         img.setAttribute("src", url)
     }
 }
+let input = document.getElementById
+
 
 let info
 function main() {
@@ -28,11 +31,19 @@ function defineExplicacao() {
     caption.innerText = `${info.explanation}`
 }
 
+
 main()
-defineUrl("img-apod", info.url)
-console.log(info.title)
 
 console.log(info)
 
-defineTitulo()
-defineExplicacao()
+const btn = document.querySelector("#send")
+btn.addEventListener("click", function(e) {
+
+    e.preventDefault()
+
+    const data = document.querySelector("#date")
+
+    const value = data.value
+
+    console.log(value)
+})

@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="CSS/template.css">
     <script src="JS/main.js" defer></script>
+    <script src="JS/jquery-3.6.0.js"></script>
     <title>APOD</title>
 </head>
 <body>
@@ -18,9 +19,16 @@
         <h1>API APOD</h1>
     </header>
     <main>
+        <p>A API APOD (Astronomy Picture of the Day), fornece uma imagem astronômca a cada dia, também é possivel consultar imagens de outras datas. Informe uma data abaixo para consultar a imagem referente a esse dia.</p>
+
+        <div class="form">
+            <form action="">
+                <label for="data">Data: </label>
+                <input type="date" name="date" id="date">
+                <input type="submit" id="send" value="ENVIAR">
+            </form>
+        </div>
         <div class="img">
-            <h2>Imagem do dia</h2>
-            
             <img id="img-apod" src="" alt="">
             <p id="title"></p>
         </div>
@@ -28,7 +36,6 @@
         <div class="caption">
             <p id="explanation"></p>
         </div>
-        
     </main>
     <footer>
         <div class="copy">
