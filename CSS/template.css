@@ -16,8 +16,13 @@ body {
     width: 70%;
     margin: 0 auto;
 }
-header {
+.img {
+    display: flex;
+    flex-direction: column;
 
+}
+.img p {
+    margin-bottom: 20px;
 }
 main {
     flex: 1 0 auto;
@@ -41,6 +46,7 @@ footer {
     height: 80px;
     justify-content: space-around;
     align-items: center;
+    padding: 10px;
 }
 .copy p {
     font-size: 15px;

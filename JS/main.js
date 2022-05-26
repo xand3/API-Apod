@@ -21,6 +21,9 @@ function main() {
 let title = document.getElementById("title") 
 let caption = document.getElementById("explanation")
 
+function define(titulo) {
+    title.innerText = `${info.title}`
+}
 
 
 main()
@@ -28,3 +31,5 @@ defineUrl("img-apod", info.url)
 console.log(info.title)
 
 console.log(info)
+
+define()
