@@ -12,17 +12,19 @@ function defineUrl(id, url) {
     }
 }
 
-
 let info
 function main() {
     data = fazGet("https://api.nasa.gov/planetary/apod?api_key=HDQhgkx4GJeyle6mxaeoirveFKMwkOppul5Lhsgo")
     info = JSON.parse(data)
-    console.log(info)
-
-    console.log(info.hdurl)
-
-    
 }
+
+let title = document.getElementById("title") 
+let caption = document.getElementById("explanation")
+
+
 
 main()
 defineUrl("img-apod", info.url)
+console.log(info.title)
+
+console.log(info)
