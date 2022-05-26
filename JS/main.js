@@ -5,15 +5,13 @@ function fazGet(url) {
     return request.responseText
 }
 let img = document.getElementById("img-apod")
-$("#img").html("alo")
+
 
 function defineUrl(id, url) {
     if(id == 'img-apod') {
         img.setAttribute("src", url)
     }
 }
-let input = document.getElementById
-
 
 let info
 function main() {
@@ -21,20 +19,6 @@ function main() {
     info = JSON.parse(data)
 }
 
-let title = document.getElementById("title") 
-let caption = document.getElementById("explanation")
-
-function defineTitulo() {
-    title.innerText = `${info.title}`
-}
-function defineExplicacao() {
-    caption.innerText = `${info.explanation}`
-}
-
-
-main()
-
-console.log(info)
 
 const btn = document.querySelector("#send")
 btn.addEventListener("click", function(e) {
@@ -47,3 +31,20 @@ btn.addEventListener("click", function(e) {
 
     console.log(value)
 })
+
+
+let title = document.getElementById("title") 
+let caption = document.getElementById("explanation")
+
+function defineTitulo() {
+    title.innerText = `${info.title}`
+}
+function defineExplicacao() {
+    caption.innerText = `${info.explanation}`
+}
+
+
+
+main()
+
+console.log(info)
