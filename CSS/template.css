@@ -22,7 +22,7 @@ body {
 
 }
 .img p {
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 main {
     flex: 1 0 auto;
@@ -33,7 +33,7 @@ main h2 {
     margin-bottom: 20px;
 }
 main img {
-    width: 70%;
+    width: 100%;
 }
 
 footer {

@@ -21,10 +21,12 @@ function main() {
 let title = document.getElementById("title") 
 let caption = document.getElementById("explanation")
 
-function define(titulo) {
+function defineTitulo() {
     title.innerText = `${info.title}`
 }
-
+function defineExplicacao() {
+    caption.innerText = `${info.explanation}`
+}
 
 main()
 defineUrl("img-apod", info.url)
@@ -32,4 +34,5 @@ console.log(info.title)
 
 console.log(info)
 
-define()
+defineTitulo()
+defineExplicacao()
