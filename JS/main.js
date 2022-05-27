@@ -1,9 +1,11 @@
 const key = "HDQhgkx4GJeyle6mxaeoirveFKMwkOppul5Lhsgo"
+
 let url =  "https://api.nasa.gov/planetary/apod?api_key=HDQhgkx4GJeyle6mxaeoirveFKMwkOppul5Lhsgo" 
 let resultadoConvertido
 async function fazGet(url) {
     let resultado = await fetch(url)
     resultadoConvertido = await resultado.json()
+    
     console.log(resultadoConvertido)
 }
 

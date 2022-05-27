@@ -56,6 +56,9 @@ main img {
     width: 100%;
     max-width: 800px;
 }
+#send {
+    margin-bottom: 10px;
+}
 footer {
     flex-shrink: 0;
     margin-top: 20px;
