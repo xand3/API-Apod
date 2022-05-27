@@ -1,37 +1,39 @@
-function fazGet(url) {
-    let request = new XMLHttpRequest()
-    request.open("GET", url, false)
-    request.send()
-    return request.responseText
+const key = "HDQhgkx4GJeyle6mxaeoirveFKMwkOppul5Lhsgo"
+let url =  "https://api.nasa.gov/planetary/apod?api_key=HDQhgkx4GJeyle6mxaeoirveFKMwkOppul5Lhsgo" 
+let resultadoConvertido
+async function fazGet(url) {
+    let resultado = await fetch(url)
+    resultadoConvertido = await resultado.json()
+    console.log(resultadoConvertido)
 }
-let img = document.getElementById("img-apod")
-
-
-function defineUrl(id, url) {
-    if(id == 'img-apod') {
-        img.setAttribute("src", url)
-    }
-}
-
-let info
-function main() {
-    data = fazGet("https://api.nasa.gov/planetary/apod?api_key=HDQhgkx4GJeyle6mxaeoirveFKMwkOppul5Lhsgo")
-    info = JSON.parse(data)
-}
-
 
 const btn = document.querySelector("#send")
-btn.addEventListener("click", function(e) {
+let data
+btn.addEventListener("click", async function(e) {
 
     e.preventDefault()
 
-    const data = document.querySelector("#date")
+    data = document.querySelector("#date")
 
     const value = data.value
 
-    console.log(value)
+    
+    let img = document.getElementById("img-apod")
+    function defineUrl(id) {
+        if(id == 'img-apod') {
+            img.setAttribute("src", resultadoConvertido.url)
+        }
+    }
+
+    defineUrl('img-apod')
 })
 
+
+
+function main() {
+    data = fazGet(url)
+}
+main()
 
 let title = document.getElementById("title") 
 let caption = document.getElementById("explanation")
@@ -45,6 +47,3 @@ function defineExplicacao() {
 
 
 
-main()
-
-console.log(info)
