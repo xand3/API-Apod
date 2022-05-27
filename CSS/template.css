@@ -52,9 +52,11 @@ main h2 {
     text-align: center;
     margin-bottom: 5px;
 }
-main img {
-    width: 100%;
-    max-width: 800px;
+#img-apod {
+    max-height: 380px;
+}
+#send {
+    margin-bottom: 10px;
 }
 footer {
     flex-shrink: 0;
